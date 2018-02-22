@@ -3,7 +3,7 @@ package prueba;
 import puntos.*;
 import rutas.*;
 public class Test {
-
+/**
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Posicion p = new Posicion(0, 0);
@@ -16,5 +16,5 @@ public class Test {
 		Punto ciudad = new Ciudad(null, p);
 		Punto rotonda = new Rotonda(null, p, 0);
 	}
-
+*/
 }

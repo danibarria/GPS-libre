@@ -1,5 +1,7 @@
 package rutas;
 
+import java.util.Date;
+
 import puntos.Punto;
 
 public abstract class Ruta {
@@ -7,7 +9,7 @@ public abstract class Ruta {
 	Punto destino;
 	Distancia distancia;
 	PuntoInteres puntoInteres;
-	
+
 	protected Ruta(Punto origen, Punto destino, Distancia distancia, PuntoInteres puntoInteres) {
 		super();
 		this.origen = origen;
@@ -46,6 +48,18 @@ public abstract class Ruta {
 	//cambiar a lista ordenada
 	public void setPuntoInteres(PuntoInteres puntoInteres) {
 		this.puntoInteres = puntoInteres;
+	}
+	/**
+	 * Dice cuanto tiempo tarda en llegar de origen a destino
+	 * @param la distancia de origen a destino
+	 */
+	public static void tiempoEnLlegar(Distancia dist) {
+		float tiempo = dist.getLongitud() / dist.getVelocidadMaxima();
+		//String t = String.valueOf(tiempo);
+		/**
+		 * @TODO Ver clase DATE o TIME
+		 */
+		System.out.println();
 	}
 	
 }
