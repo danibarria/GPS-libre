@@ -50,16 +50,36 @@ public abstract class Ruta {
 		this.puntoInteres = puntoInteres;
 	}
 	/**
+	 * 
 	 * Dice cuanto tiempo tarda en llegar de origen a destino
 	 * Verifica si existe alguna ruta la ruta
-	 * @param la distancia de origen a destino
+	 * @param listaRutas  arraylist
+	 * @param puntoOrigen punto de origen
+	 * @param puntoDestino punto de 
 	 */
-	public static void tiempoEnLlegar() {
-		
-		
+	public static void tiempoEnLlegar(ArrayList<Ruta> listaRutas,Punto puntoOrigen, Punto puntoDestino) {
+		ArrayList<Ruta> aux = existeRuta(listaRutas, puntoOrigen,puntoDestino);
+		if(aux.size()>0) {//si hay elementos
+			aux.forEach(item->tiempo(item));
+			//System.out.println("No existe ruta entre " +puntoOrigen.getNombre()+" y " + puntoDestino.getNombre());
+		}else {
+			System.out.println("No existe ruta entre " +puntoOrigen.getNombre()+" y " + puntoDestino.getNombre());
+		}
 		//float tiempo = dist.getLongitud() / dist.getVelocidadMaxima();
 		
-		System.out.println();
+	}
+	/**
+	 * tiempo de una ruta para llegar de un origen a un destino
+	 * @param ruta la ruta de 
+	 */
+	private static void tiempo(Ruta ruta) {
+		float route = ruta.distancia.getLongitud(); // [km]
+        float speed = ruta.distancia.getVelocidadMaxima(); // [km/h]
+        float time =  route / speed;
+        int hours = (int) time;
+        int minutes = (int) (60 * (time - hours));
+
+        System.out.println(hours + "h " + minutes + "m " );
 	}
 	/**
 	 * Recibe una lista de rutas, un punto de origen y otro de destino, verifica si existe

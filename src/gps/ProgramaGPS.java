@@ -19,21 +19,21 @@ public class ProgramaGPS {
 		 Punto trelew = new Ciudad("Trelew", new Posicion(3,3), 102000);
 		 Punto gaiman = new Ciudad("Gaiman", new Posicion(3,3), 102000);
 		 
-		 Ruta esqueltrelew = new Ripio(esquel, trelew, new Distancia(3,3),null);
-		 Ruta trelewesquel = new Pavimentada( trelew,esquel, new Distancia(3,3),null);
-		 Ruta trelewesquel2 = new EnConstruccion( trelew,esquel, new Distancia(3,3),null);
+		 Ruta esqueltrelew = new Ripio(esquel, trelew, new Distancia(700,120),null);
+		 Ruta trelewesquel = new Pavimentada( trelew,esquel, new Distancia(700,300),null);
+		 Ruta trelewesquel2 = new EnConstruccion( trelew,esquel, new Distancia(700,200),null);
 		 
-		 listaRutas.add(trelewesquel2);
-		 listaRutas.add(trelewesquel);
 		 listaRutas.add(esqueltrelew);
+		 listaRutas.add(trelewesquel);
+		 listaRutas.add(trelewesquel2);
 		 
 		 matches = Ruta.existeRuta(listaRutas, esquel,trelew);
-
-		 matches.forEach(item->System.out.println(item.toString()));
+		 Ruta.tiempoEnLlegar(listaRutas, trelew, esquel);
+		 //matches.forEach(item->System.out.println(item.toString()));
 		 
 		 matches = Ruta.existeRuta(listaRutas, esquel,gaiman);
 
-		 matches.forEach(item->System.out.println(item.toString()));
+		 //matches.forEach(item->System.out.println(item.toString()));
 	}
 
 }
