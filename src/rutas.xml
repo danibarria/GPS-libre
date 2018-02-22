@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<listaRutas>
 	<Ruta>
 		<Ripio>
 			<Origen>Trelew</Origen>
@@ -17,10 +18,40 @@
 			</PuntoInteres>
 		</Ripio>
 	</Ruta>
-	
 	<Ruta>
-		<Pavimentada>
-			<Origen>Rawson</Origen>
-			<Destino>Gaiman</Destino>
-		</Pavimentada>
+		<Ripio>
+			<Origen>Trelew</Origen>
+			<Destino>Rawson</Destino>
+			<Distancia>
+				<Longitud>23</Longitud>
+				<Velocidad>80</Velocidad>
+			</Distancia>
+			<PuntoInteres>	
+				<AutoServicio>
+					<KM>14</KM>
+					<tipo>GNC</tipo>
+					<tipo>Nafta</tipo>
+					<marca>Shell</marca>
+				</AutoServicio>
+			</PuntoInteres>
+		</Ripio>
 	</Ruta>
+	<Ruta>
+		<Ripio>
+			<Origen>Trelew</Origen>
+			<Destino>Rawson</Destino>
+			<Distancia>
+				<Longitud>23</Longitud>
+				<Velocidad>80</Velocidad>
+			</Distancia>
+			<PuntoInteres>	
+				<AutoServicio>
+					<KM>14</KM>
+					<tipo>GNC</tipo>
+					<tipo>Nafta</tipo>
+					<marca>Shell</marca>
+				</AutoServicio>
+			</PuntoInteres>
+		</Ripio>
+	</Ruta>
+</listaRutas>

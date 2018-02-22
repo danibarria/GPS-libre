@@ -10,6 +10,21 @@ public abstract class Ruta {
 	Distancia distancia;
 	PuntoInteres puntoInteres;
 
+	static ArrayList<Ruta> listaRutas = new ArrayList<Ruta>();
+	
+	
+	
+	public static ArrayList<Ruta> getListaRutas() {
+		return listaRutas;
+	}
+	/**
+	 * revisar
+	 * @param listaRutas
+	 */
+	public static void setListaRutas(ArrayList<Ruta> listaRutas) {
+		Ruta.listaRutas = listaRutas;
+	}
+
 	protected Ruta(Punto origen, Punto destino, Distancia distancia, PuntoInteres puntoInteres) {
 		super();
 		this.origen = origen;
