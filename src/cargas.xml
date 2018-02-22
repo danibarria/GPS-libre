@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GPS>
+	<Punto>
+		<Ciudad>
+			<Nombre>Trelew</Nombre>
+			<Posicion>
+				<Latitud>24</Latitud>
+				<Longitud>45</Longitud>
+			</Posicion>
+			<CantidadHabitantes>103000</CantidadHabitantes>	
+		</Ciudad>
+	</Punto>
+
+	<Camino>
+		<Origen>Trelew</Origen>
+		<Destino>Rawson</Destino>
+
+		<Distancia>
+			<Longitud>23</Longitud>
+			<Velocidad>80</Velocidad>
+		</Distancia>
+
+		<PuntoInteres>
+			<KM>14</KM>
+			<AutoServicio>
+				<tipo>GNC</tipo>
+				<tipo>Nafta</tipo>
+				<marca>Shell</marca>
+			</AutoServicio>
+		</PuntoInteres>
+	</Camino>
+</GPS>
