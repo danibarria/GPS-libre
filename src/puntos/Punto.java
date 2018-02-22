@@ -1,5 +1,7 @@
 package puntos;
 
+import java.util.ArrayList;
+
 public abstract class Punto {
 	String nombre;
 	Posicion posicion;
@@ -22,5 +24,19 @@ public abstract class Punto {
 		this.posicion = posicion;
 	}
 	
+	// Lista de ciudades o rotondas
+	static ArrayList<Punto> listaCiudades = new ArrayList<Punto>();
+
+	public static ArrayList<Punto> getListaCiudades() {
+		return listaCiudades;
+	}
+	/**
+	 * revisar
+	 * @param listaCiudades
+	 */
+	public static void setListaCiudades(ArrayList<Punto> listaCiudades) {
+		Punto.listaCiudades = listaCiudades;
+	}
+
 	
 }
