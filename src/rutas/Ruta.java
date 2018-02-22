@@ -1,6 +1,6 @@
 package rutas;
 
-import java.util.Date;
+import java.util.*;
 
 import puntos.Punto;
 
@@ -51,15 +51,32 @@ public abstract class Ruta {
 	}
 	/**
 	 * Dice cuanto tiempo tarda en llegar de origen a destino
+	 * Verifica si existe alguna ruta la ruta
 	 * @param la distancia de origen a destino
 	 */
-	public static void tiempoEnLlegar(Distancia dist) {
-		float tiempo = dist.getLongitud() / dist.getVelocidadMaxima();
-		//String t = String.valueOf(tiempo);
-		/**
-		 * @TODO Ver clase DATE o TIME
-		 */
+	public static void tiempoEnLlegar() {
+		
+		
+		//float tiempo = dist.getLongitud() / dist.getVelocidadMaxima();
+		
 		System.out.println();
 	}
-	
+	/**
+	 * Recibe una lista de rutas, un punto de origen y otro de destino, verifica si existe
+	 * una o mas rutas hacia 
+	 * @param listaRutas  lista de rutas disponibles
+	 * @param puntoOrigen  punto de origen
+	 * @param puntoDestino punto de destin
+	 * @return una lista vacia si no existe, sino una lista con todas las rutas disponibles
+	 */
+	public static ArrayList<Ruta> existeRuta(ArrayList<Ruta> listaRutas,Punto puntoOrigen, Punto puntoDestino){
+		ArrayList<Ruta> listaFinal = new ArrayList <Ruta>();
+		listaRutas.forEach(item->{
+			if((item.origen == puntoOrigen && item.destino== puntoDestino)
+					|| (item.origen == puntoDestino && item.destino== puntoOrigen )) {
+				listaFinal.add(item);
+			}
+		});		
+		return listaFinal;
+	}
 }

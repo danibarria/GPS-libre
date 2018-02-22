@@ -3,11 +3,12 @@ package puntos;
 public class Ciudad extends Punto {
 	int cantidadHabitantes;
 
-	public Ciudad(String nombre, Posicion posicion) {
-		super(nombre, posicion);
-		// TODO Auto-generated constructor stub
-	}
 	
+	
+	public Ciudad(String nombre, Posicion posicion, int cantidadHabitantes) {
+		super(nombre, posicion);
+		this.cantidadHabitantes = cantidadHabitantes;
+	}
 	public int getCantidadHabitantes() {
 		return cantidadHabitantes;
 	}
