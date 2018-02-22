@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Punto>
+	<Ciudad>
+		<Nombre>Trelew</Nombre>
+		<Posicion>
+			<Latitud>24</Latitud>
+			<Longitud>45</Longitud>
+		</Posicion>
+		<CantidadHabitantes>103000</CantidadHabitantes>	
+	</Ciudad>
+</Punto>
