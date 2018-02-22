@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/puntos.xml</name>
+			<type>1</type>
+			<location>C:/Users/danie/eclipse-workspace/GPS-final-libre/src/puntos.xml</location>
+		</link>
+		<link>
+			<name>src/rutas.xml</name>
+			<type>1</type>
+			<location>C:/Users/danie/eclipse-workspace/GPS-final-libre/src/rutas.xml</location>
+		</link>
+	</linkedResources>
 </projectDescription>
