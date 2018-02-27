@@ -12,10 +12,20 @@
 	</Punto>
 	<Punto>
 		<Ciudad>
+			<Nombre>Rawson</Nombre>
+			<Posicion>
+				<Latitud>70</Latitud>
+				<Longitud>60</Longitud>
+			</Posicion>
+			<CantidadHabitantes>103000</CantidadHabitantes>	
+		</Ciudad>
+	</Punto>
+	<Punto>
+		<Ciudad>
 			<Nombre>Esquel</Nombre>
 			<Posicion>
 				<Latitud>24</Latitud>
-				<Longitud>45</Longitud>
+				<Longitud>70</Longitud>
 			</Posicion>
 			<CantidadHabitantes>103000</CantidadHabitantes>	
 		</Ciudad>
@@ -25,7 +35,7 @@
 			<Nombre>Comodoro Rivadavia</Nombre>
 			<Posicion>
 				<Latitud>24</Latitud>
-				<Longitud>45</Longitud>
+				<Longitud>33</Longitud>
 			</Posicion>
 			<CantidadHabitantes>103000</CantidadHabitantes>	
 		</Ciudad>
@@ -35,7 +45,7 @@
 			<Nombre>Tecka</Nombre>
 			<Posicion>
 				<Latitud>24</Latitud>
-				<Longitud>45</Longitud>
+				<Longitud>300</Longitud>
 			</Posicion>
 			<CantidadHabitantes>103000</CantidadHabitantes>	
 		</Ciudad>

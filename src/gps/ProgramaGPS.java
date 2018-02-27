@@ -1,6 +1,10 @@
 package gps;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import configuracion.CargaXML;
@@ -33,10 +37,16 @@ public class ProgramaGPS {
 		 CargaXML.cargarXMLPuntos(puntos);
 		 CargaXML.cargarXMLAristas(caminos);
 		 //puntos.forEach(item->System.out.println(item.toString()));
-		 caminos.forEach(tiem->System.out.println(tiem.toString()+" "+tiem.getDestination().getName()
-				 + tiem.getSource().getId()
-				 ));
+		 Grafo grafo = new Grafo(puntos,caminos);
+		 Dijkstra dijkstra = new Dijkstra(grafo);
+		 dijkstra.execute(puntos.get(2));
+		 LinkedList<Vertice> path = dijkstra.getPath(puntos.get(0));
+		 assertNotNull(path);
+		 assertTrue(path.size() > 0);
 		 
+		 for(Vertice vertex : path) {
+			 System.out.println(vertex);
+		 }
 	}
 
 }

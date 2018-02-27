@@ -34,23 +34,16 @@ public class CargaXML {
 				if(nodo.getNodeType() == Node.ELEMENT_NODE) {
 					//creamos elemento
 					Element elemento = (Element) nodo;
-					Arista camino = new Arista(
-							"Ruta:" +
+					aristas = addLane(
+							aristas,
 							elemento.getElementsByTagName("Origen").item(0).getTextContent()+"-"+
 							elemento.getElementsByTagName("Destino").item(0).getTextContent(),
 							
-							new Vertice(elemento.getElementsByTagName("Origen").item(0).getTextContent()
-									,elemento.getElementsByTagName("Origen").item(0).getTextContent()
-									), 
-							new Vertice(elemento.getElementsByTagName("Destino").item(0).getTextContent()
-									,elemento.getElementsByTagName("Destino").item(0).getTextContent()
-									),
-							
-							Integer.valueOf(elemento.getElementsByTagName("Longitud").item(0).getTextContent())
-							
-									 
-							);
-					aristas.add(camino);					
+							elemento.getElementsByTagName("Origen").item(0).getTextContent(), 
+							elemento.getElementsByTagName("Destino").item(0).getTextContent(),
+							Integer.valueOf(elemento.getElementsByTagName("Longitud").item(0).getTextContent()
+							)
+						);
 				}
 			}
 			return aristas;
@@ -92,4 +85,19 @@ public class CargaXML {
 		return nodos;
 	}
 	
+	
+	private static List<Arista> addLane(List<Arista> aristas, String laneId, String sourceLocNo, String destLocNo,
+            int duration) {
+        Arista lane = new Arista(laneId, 
+        		new Vertice(sourceLocNo,sourceLocNo) , 
+        		new Vertice(destLocNo,destLocNo), 
+        		duration );
+        Arista lane2 = new Arista(laneId, 
+        		new Vertice(destLocNo,destLocNo), 
+        		new Vertice(sourceLocNo,sourceLocNo), 
+        		duration );
+        aristas.add(lane);
+        aristas.add(lane2);
+        return aristas;
+    }
 }

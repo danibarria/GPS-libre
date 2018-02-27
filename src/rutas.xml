@@ -20,10 +20,10 @@
 	</Ruta>
 	<Ruta>
 		<Ripio>
-			<Origen>Trelew</Origen>
-			<Destino>Rawson</Destino>
+			<Origen>Rawson</Origen>
+			<Destino>Esquel</Destino>
 			<Distancia>
-				<Longitud>23</Longitud>
+				<Longitud>50</Longitud>
 				<Velocidad>80</Velocidad>
 			</Distancia>
 			<PuntoInteres>	
@@ -41,7 +41,7 @@
 			<Origen>Trelew</Origen>
 			<Destino>Rawson</Destino>
 			<Distancia>
-				<Longitud>23</Longitud>
+				<Longitud>100</Longitud>
 				<Velocidad>80</Velocidad>
 			</Distancia>
 			<PuntoInteres>	
